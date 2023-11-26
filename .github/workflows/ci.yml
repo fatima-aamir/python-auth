@@ -19,8 +19,9 @@ jobs:
       - name: Log in to DockerHub
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.fatima4321 }}
-          password: ${{ secrets.123fatima }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
 
       - name: Push Docker Image
         run: docker push fatima4321/python-app1:latest
